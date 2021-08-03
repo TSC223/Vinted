@@ -6,12 +6,14 @@ const Header = () => {
     return(
         <>
             <div className="section_Header">
-                <img className="logo_vinted" src={LOGO}/>
+                <Link to="/">
+                    <img className="logo_vinted" src={LOGO} />
+                </Link>
                
                 <nav className="nav_zone" >
-                    <div>S'inscrire</div>
-                    <div>Se connecter</div>
-                    <div>Vends tes articles</div>
+                    <Link to="/Signup/">S'inscrire</Link>
+                    <Link to="/Login/">Se connecter</Link>
+                    <Link to="/">Vends tes articles</Link>
                 </nav>
             </div>
         </>

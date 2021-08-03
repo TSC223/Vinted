@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import Header from "../components/Header";
 import axios from "axios";
 
 const Offers = () => {
@@ -28,30 +29,57 @@ const Offers = () => {
   return isLoading ? (
     <p>En cours de chargement...</p>
   ) : (
+    <>
+    <Header />
+    <div className="page_offer">
+      <div className="img_offer">
+        <img src={data.product_image.secure_url} alt={data.product_name} />
+        
+    </div>
     <div>
-      <img src={data.product_image.secure_url} alt={data.product_name} />
-      <p>{data.product_price}</p>
-      <ul>
+      <ul className="descript_du_haut">
+        <p className="price_offer">Prix de l'article <strong>{data.product_price} €</strong></p>
+
         {data.product_details.map((elem, index) => {
           const keys = Object.keys(elem);
           // 1er tour : ["MARQUE"]
           // 2e tour : ["TAILLE"]
-
           return (
-            <li key={index}>
-              <span>{keys[0]}</span>
-              <span>{elem[keys[0]]}</span>
+            <div 
+            className="li_descript_detail"
+            key={index}>
+              <div><strong>{keys[0]} :</strong></div>
+              <div>  <span>{elem[keys[0]]}</span></div>
+            
+              
               {/* 1er tour : elem.MARQUE
                   2e tour : elem.TAILLE
                */}
-            </li>
-          );
+               <br />
+               
+            </div>
+           
+          ); 
         })}
+        
+         
+         <div className="descript_zone_dubas">
+           <br />
+            <strong>{data.product_details[1].ÉTAT}</strong>
+            <p>{data.product_description}</p>
+            <button>ACHETER</button>
+            
+         </div>
       </ul>
-    </div>
+      
+      </div>
+      
+    </div> 
+    </>
   );
+ 
 };
-
+ 
 export default Offers;
 
 

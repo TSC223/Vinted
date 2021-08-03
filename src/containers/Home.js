@@ -33,18 +33,21 @@ const Home = () => {
         return(
         <>
             <div className="offer_card">
-                <Link to={`/offer/${offer._id}`} key={offer._id}>
+                <Link to={`/Offers/${offer._id}`} key={offer._id}>
                 
-                    <div className="offer_name">{offer.owner.account.username}</div> 
-                    <img 
-                        className="offer_image_principal" 
-                        alt="vibted"
-                        style={{height:"300px"}} 
+                    
+                    
+                    
+                    <div className="offer_name">{offer.owner.account.username}</div>
+                    <img className="offer_image_principal" 
+                        alt="vinted_reacteur" 
                         src={offer.product_image.secure_url} />
                     <div className="offer_desciption">
                         <h3>{offer.product_details[0].MARQUE}</h3>
                         <p>{offer.product_details[1].TAILLE}</p>
                         <p>{offer.product_price}€</p>
+                        
+                        
                         
                     </div>
                 </Link>
