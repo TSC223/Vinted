@@ -1,1 +1,75 @@
-/* Other rules */
+body {
+  font-family: "arial";
+}
+.section_Header {
+  border: 2px solid blue;
+
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  padding: 1%;
+}
+.logo_vinted {
+  height: 30px;
+}
+.nav_zone {
+  display: flex;
+  justify-content: space-around;
+  padding: 1%;
+  width: 30%;
+}
+.nav_zone div {
+  margin-left: 1%;
+  font-size: 15px;
+}
+.hero_carre_blanc {
+  width: 33%;
+  border: 2px solid grey;
+  padding: 2%;
+  margin: 3%;
+  background: white;
+  border-radius: 10px;
+  position: absolute;
+  top: 120px;
+}
+.hero_carre_blanc h1 {
+}
+.hero_carre_blanc button {
+  margin-top: 3%;
+  margin-bottom: 1%;
+  padding: 3.5%;
+  border-radius: 5px;
+  width: 50%;
+  text-align: left;
+  font-size: 19px;
+}
+.hero_carre_blanc p {
+  font-size: 80%;
+  margin-left: 1%;
+  margin-top: -0.5px;
+}
+.section_hero img {
+  border: 2px solid red;
+  height: 450px;
+  width: 100%;
+}
+.section_offer {
+  border: 2px solid gold;
+}
+.offer_card {
+  border: 2px solid black;
+  margin-left: 2%;
+  height: 480px;
+  display: inline-block;
+  margin-top: 0px;
+}
+.offer_name {
+  min-height: 35px;
+}
+.offer_image_principal {
+  height: 170px;
+}
+.offer_desciption {
+  border: 1px solid green;
+  height: 140px;
+}
